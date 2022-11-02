@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fraunces:700,900&display=swap');
+
+:root {
+  --serif: 'Fraunces';
+  --sans: 'Barlow';
+  --font-size: 18px;
+  --normal-sans: 600;
+  --normal-serif: 700;
+  --bold-serif: 900;
+
+  --margin: 1rem;
+  --padding: 1rem;
+
+  --yellow: hsl(51, 100%, 49%);
+  --dark-desaturated-cyan: hsl(167, 40%, 24%);
+  --dark-blue: hsl(198, 62%, 26%);
+  --dark-moderate-cyan: hsl(168, 34%, 41%);
+  --moderate-cyan: rgba(153, 217, 203, 255);
+
+  --dark-desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.main-img {
+  height: 100%;
+  object-fit: fill;
+  max-width: 100%;
+}
+
+.txt-img-card {
+  flex: auto;
+  position: relative;
+
+  & div {
+    bottom: 10%;
+    padding: var(--padding);
+    position: absolute;
+    text-align: center;
+  }
+
+  & h2 {
+    color: var(--dark-desaturated-cyan);
+    font-family: var(--serif), serif;
+    font-size: 2rem;
+    font-weight: var(--bold-serif);
+  }
+
+  & p {
+    color: var(--dark-desaturated-cyan);
+    font-family: var(--sans), sans-serif;
+    font-weight: var(--normal-serif);
+  }
+}
+
+.txt-card {
+  align-self: stretch;
+  background: white;
+  flex: auto;
+  padding: var(--padding);
+
+  & > h2 {
+    color: var(--dark-desaturated-blue);
+    font-family: var(--serif), serif;
+    font-weight: var(--bold-serif);
+    text-align: center;
+  }
+
+  & > p {
+    color: var(--very-dark-grayish-blue);
+    font-family: var(--sans), sans-serif;
+    font-size: var(--font-size);
+    font-weight: var(--normal-sans);
+    line-height: 1.6;
+    text-align: center;
+
+    & > span {
+      color: var(--dark-desaturated-blue);
+      font-family: var(--serif), sans-serif;
+      font-weight: var(--bold-serif);
+      text-decoration: underline;
+    }
+  }
+}
+
+.visually-hidden {
+  display: none;
+}
+
+#main-nav {
+  height: max-content;
+  left: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 12.75%;
+  z-index: 2;
+
+  & menu {
+    background: white;
+    color: var(--very-dark-grayish-blue);
+    font-family: var(--sans), sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+
+    & li {
+      cursor: pointer;
+      padding: var(--padding);
+    }
+
+    & li span {
+      background: var(--yellow);
+      border-radius: 1.75rem;
+      color: var(--dark-desaturated-blue);
+      font-family: var(--serif), serif;
+      padding: 0.75rem 1.75rem;
+      width: min-content;
+    }
+  }
+}
+/* Triangle shape in upper right corner of nav */
+#main-nav::before {
+  border-bottom: 2rem solid white;
+  border-left: 2rem solid transparent;
+  content: '';
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: -2rem;
+  width: 0;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+}
+
+main > header {
+  flex: auto;
+  position: relative;
+  text-align: center;
+
+  & #menu-box {
+    align-items: center;
+    bottom: 92%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    & > img {
+      margin: 0 var(--margin);
+    }
+
+    & #ham-btn {
+      cursor: pointer;
+    }
+  }
+
+  & #bg {
+    height: 100%;
+    object-fit: fill;
+    width: 100%;
+  }
+
+  & > h1 {
+    color: white;
+    font-family: var(--serif), serif;
+    font-size: 3.5rem;
+    font-weight: var(--bold-serif);
+    letter-spacing: 0.25rem;
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    left: auto;
+    right: auto;
+    width: 100%;
+    z-index: 1;
+  }
+  /* The box allows the arrow to be horizontally centered */
+  & #arrow-box {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    & #down-arrow {
+      /* calc(100vw * 1.43467 * 0.25) */
+      bottom: 25%;
+      height: auto;
+      position: absolute;
+      left: auto;
+      max-width: 100%;
+      right: auto;
+      z-index: 1;
+    }
+  }
+}
+
+#testimonials {
+  align-self: stretch;
+  background: white;
+  flex: auto;
+  padding: var(--padding);
+
+  & h2 {
+    color: var(--grayish-blue);
+    font-family: var(--serif), serif;
+    letter-spacing: 0.25rem;
+    text-align: center;
+  }
+
+  & > div {
+    color: var(--very-dark-grayish-blue);
+    font-family: var(--sans), sans-serif;
+    line-height: 1.7;
+    margin: 5rem 0;
+    text-align: center;
+
+    & > div {
+      color: var(--dark-desaturated-blue);
+      font-family: var(--serif), serif;
+      font-weight: var(--bold-serif);
+
+      & span {
+        color: var(--grayish-blue);
+        font-family: var(--sans), sans-serif;
+        font-size: 0.75rem;
+        font-weight: var(--normal-sans);
+      }
+    }
+  }
+
+  & img {
+    border-radius: 50%;
+    height: auto;
+    object-fit: contain;
+    max-width: 20%;
+  }
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+main > footer {
+  align-items: center;
+  background: var(--moderate-cyan);
+  display: flex;
+  justify-content: center;
+  flex: auto;
+  flex-wrap: wrap;
+  width: 100%;
+
+  & > img {
+    margin-top: 2rem;
+  }
+
+  & nav {
+    flex: auto;
+    width: 100%;
+  }
+
+  & menu {
+    align-items: center;
+    color: var(--dark-desaturated-cyan);
+    display: flex;
+    flex-direction: nowrap;
+    font-family: var(--sans), sans-serif;
+    font-weight: var(--normal-sans);
+    justify-content: space-between;
+    list-style-type: none;
+    margin: var(--margin);
+    padding: 0;
+    text-align: center;
+
+    & li {
+      cursor: pointer;
+      display: inline;
+      padding: var(--padding);
+    }
+  }
+
+  & div {
+    align-items: center;
+    display: flex;
+    flex: auto;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin: 3rem;
+
+    & img {
+      cursor: pointer;
+    }
+  }
+}
