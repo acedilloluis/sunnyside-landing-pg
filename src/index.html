@@ -15,9 +15,9 @@
     <title>Frontend Mentor | Sunnyside agency landing page</title>
   </head>
   <body>
-    <main>
+    <main class="centered-wrapper">
       <header>
-        <img src="./images/mobile/image-header.jpg" alt="" id="bg" />
+        <img src="./images/mobile/image-header.jpg" alt="" class="main-img" />
         <div id="menu-box">
           <img src="./images/logo.svg" alt="sunnyside logo" />
           <img
@@ -25,58 +25,58 @@
             alt="menu button"
             id="ham-btn"
           />
+          <nav id="main-nav" class="visually-hidden">
+            <menu class="centered-wrapper paragraph">
+              <li>About</li>
+              <li>Services</li>
+              <li>Projects</li>
+              <li><span>Contact</span></li>
+            </menu>
+          </nav>
         </div>
-        <nav id="main-nav" class="visually-hidden">
-          <menu>
-            <li>About</li>
-            <li>Services</li>
-            <li>Projects</li>
-            <li><span>Contact</span></li>
-          </menu>
-        </nav>
-        <h1>We are creatives</h1>
-        <div id="arrow-box">
-          <img src="./images/icon-arrow-down.svg" alt="" id="down-arrow" />
+        <h1 class="title">We are creatives</h1>
+        <div id="arrow-box" class="centered-wrapper">
+          <img src="./images/icon-arrow-down.svg" alt="" id="arrow" />
         </div>
       </header>
 
       <section>
         <img
           src="./images/mobile/image-transform.jpg"
-          alt=""
+          alt="an egg"
           class="main-img"
         />
       </section>
 
       <section class="txt-card">
-        <h2>Transform your brand</h2>
+        <h2 class="title">Transform your brand</h2>
 
-        <p>
+        <p class="paragraph">
           We are a full-service creative agency specializing in helping brands
           grow fast. Engage your clients through compelling visuals that do most
           of the marketing for you. <br />
           <br />
-          <span>Learn more</span>
+          <span id="learn1" class="title">Learn more</span>
         </p>
       </section>
 
       <section>
         <img
           src="./images/mobile/image-stand-out.jpg"
-          alt=""
+          alt="a pink cup"
           class="main-img"
         />
       </section>
 
       <section class="txt-card">
-        <h2>Stand out to the right audience</h2>
+        <h2 class="title">Stand out to the right audience</h2>
 
-        <p>
+        <p class="paragraph">
           Using a collaborative formula of designers, researchers,
           photographers, videographers, and copywriters, we'll build and extend
           your brand in digital places. <br />
           <br />
-          <span>Learn more</span>
+          <span id="learn2" class="title">Learn more</span>
         </p>
       </section>
 
@@ -87,8 +87,8 @@
           class="main-img"
         />
         <div>
-          <h2>Graphic design</h2>
-          <p>
+          <h2 class="title">Graphic design</h2>
+          <p class="paragraph">
             Great design makes you memorable. We deliver artwork that
             underscores your brand message and captures potential clients'
             attention.
@@ -103,8 +103,8 @@
           class="main-img"
         />
         <div>
-          <h2>Photography</h2>
-          <p>
+          <h2 class="title">Photography</h2>
+          <p class="paragraph">
             Increase your credibility by getting the most stunning, high-quality
             photos that improve your business image.
           </p>
@@ -114,39 +114,39 @@
       <section id="testimonials">
         <h2>Client testimonials</h2>
 
-        <div>
+        <div class="paragraph">
           <img src="./images/image-emily.jpg" alt="Emily profile picture" />
           <p>
             We put our trust in Sunnyside and they delivered, making sure our
             needs were met and deadlines were always hit.
           </p>
-          <div>
+          <div class="title">
             Emily R. <br />
-            <span>Marketing Director</span>
+            <span class="paragraph">Marketing Director</span>
           </div>
         </div>
 
-        <div>
+        <div class="paragraph">
           <img src="./images/image-thomas.jpg" alt="Thmoas profile picture" />
           <p>
             Sunnyside's enthusiasm coupled with their keen interest in our
             brand's success made it a satisfying and enjoyable experience.
           </p>
-          <div>
+          <div class="title">
             Thomas S. <br />
-            <span>Chief Operating Officer</span>
+            <span class="paragraph">Chief Operating Officer</span>
           </div>
         </div>
 
-        <div>
+        <div class="paragraph">
           <img src="./images/image-jennie.jpg" alt="Jennie profile picture" />
           <p>
             Incredible end result! Our sales increased over 400% when we worked
             with Sunnyside. Highly recommended!
           </p>
-          <div>
+          <div class="title">
             Jennie F. <br />
-            <span>Business Owner</span>
+            <span class="paragraph">Business Owner</span>
           </div>
         </div>
       </section>
@@ -182,16 +182,16 @@
         </div>
       </section>
 
-      <footer>
+      <footer class="centered-wrapper">
         <img src="./images/logo-footer.svg" alt="sunnyside logo" />
         <nav>
-          <menu>
+          <menu class="even-spread-wrapper paragraph">
             <li>About</li>
             <li>Services</li>
             <li>Projects</li>
           </menu>
         </nav>
-        <div>
+        <div class="even-spread-wrapper">
           <img src="./images/icon-facebook.svg" alt="facebook icon" />
           <img src="./images/icon-instagram.svg" alt="instagram icon" />
           <img src="./images/icon-twitter.svg" alt="twitter icon" />
