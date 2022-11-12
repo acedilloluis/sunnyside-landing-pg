@@ -139,10 +139,10 @@ main > header {
 
   & #menu-box {
     align-items: center;
-    bottom: 92%;
     display: flex;
     justify-content: space-between;
     position: absolute;
+    top: 1%;
     width: 100%;
     z-index: 1;
 
@@ -161,7 +161,7 @@ main > header {
     left: var(--margin);
     right: var(--margin);
     top: 4rem;
-    z-index: 2;
+    z-index: 1;
 
     & menu {
       background: white;
@@ -205,7 +205,7 @@ main > header {
     letter-spacing: 0.25rem;
     position: absolute;
     text-align: center;
-    top: 20%;
+    top: 15%;
     left: auto;
     right: auto;
     width: 100%;
@@ -222,7 +222,7 @@ main > header {
       left: auto;
       max-width: 100%;
       right: auto;
-      z-index: 1;
+      z-index: 0;
     }
   }
 }
@@ -316,27 +316,35 @@ main > footer {
   }
 
   main > header {
-    border: 2px solid green;
-
     & #ham-btn {
       display: none;
     }
 
     & #main-nav {
-      border: 2px solid black;
-      display: inline-block !important;
+      display: block !important;
       position: static;
 
       & menu {
+        background: transparent;
         color: white;
-        flex-direction: row;
+        display: block;
+        padding: var(--padding);
         width: auto;
+
+        & li {
+          display: inline;
+          margin: var(--margin);
+        }
 
         & li span {
           background: white;
           color: black;
         }
       }
+    }
+
+    & #main-nav::before {
+      display: none;
     }
   }
 
