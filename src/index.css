@@ -228,7 +228,6 @@ main > header {
 }
 
 #testimonials {
-  align-self: stretch;
   background: white;
   flex: auto;
   padding: var(--padding);
@@ -308,5 +307,80 @@ main > footer {
     & img {
       cursor: pointer;
     }
+  }
+}
+
+@media (min-width: 720px) {
+  main {
+    flex-wrap: wrap;
+  }
+
+  main > header {
+    border: 2px solid green;
+
+    & #ham-btn {
+      display: none;
+    }
+
+    & #main-nav {
+      border: 2px solid black;
+      display: inline-block !important;
+      position: static;
+
+      & menu {
+        color: white;
+        flex-direction: row;
+        width: auto;
+
+        & li span {
+          background: white;
+          color: black;
+        }
+      }
+    }
+  }
+
+  .img-card {
+    border: 2px solid black;
+    width: 50%;
+  }
+
+  .txt-img-card {
+    border: 2px solid blue;
+    width: 50%;
+  }
+
+  .txt-card {
+    border: 2px solid red;
+    width: 50%;
+  }
+
+  #transform-desktop {
+    display: block !important;
+  }
+
+  #transform-mobile {
+    display: none;
+  }
+
+  #testimonials {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    & h2 {
+      flex: 1 0 100%;
+    }
+
+    & > div {
+      flex: 1 0 33.333%;
+      padding: var(--padding);
+    }
+  }
+
+  #gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
   }
 }
