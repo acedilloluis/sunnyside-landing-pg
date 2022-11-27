@@ -39,8 +39,8 @@ body {
 }
 
 main {
-  flex-direction: column;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: 1fr;
   font-size: var(--font-size);
   width: 100%;
 }
@@ -74,7 +74,6 @@ main {
 }
 
 .txt-img-card {
-  flex: auto;
   position: relative;
 
   & div {
@@ -92,7 +91,6 @@ main {
 
 .txt-card {
   background: white;
-  flex: auto;
   padding: var(--padding);
 
   & h2 {
@@ -133,7 +131,6 @@ main {
 }
 
 main > header {
-  flex: auto;
   position: relative;
   text-align: center;
 
@@ -229,7 +226,6 @@ main > header {
 
 #testimonials {
   background: white;
-  flex: auto;
   padding: var(--padding);
 
   & h2 {
@@ -312,10 +308,12 @@ main > footer {
 
 @media (min-width: 720px) {
   main {
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
   }
 
   main > header {
+    grid-column: span 2;
+
     & #ham-btn {
       display: none;
     }
@@ -348,30 +346,17 @@ main > footer {
     }
   }
 
-  .img-card {
-    border: 2px solid black;
-    width: 50%;
+  #egg {
+    grid-column: 2;
   }
 
-  .txt-img-card {
-    border: 2px solid blue;
-    width: 50%;
-  }
-
-  .txt-card {
-    border: 2px solid red;
-    width: 50%;
-  }
-
-  #transform-desktop {
-    display: block !important;
-  }
-
-  #transform-mobile {
-    display: none;
+  #transform-brand {
+    grid-column: 1;
+    grid-row: 2;
   }
 
   #testimonials {
+    grid-column: span 2;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -388,7 +373,12 @@ main > footer {
   }
 
   #gallery {
+    grid-column: span 2;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
+  }
+
+  main > footer {
+    grid-column: span 2;
   }
 }
