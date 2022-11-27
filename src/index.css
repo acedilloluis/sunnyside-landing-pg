@@ -21,13 +21,17 @@
   --dark-moderate-cyan: hsl(168, 34%, 41%);
   --moderate-cyan: rgba(153, 217, 203, 255);
 
+  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
   --dark-desaturated-blue: hsl(212, 27%, 19%);
   --very-dark-grayish-blue: hsl(213, 9%, 39%);
   --dark-grayish-blue: hsl(232, 10%, 55%);
   --grayish-blue: hsl(210, 4%, 67%);
+  --light-grayish-blue: rgba(167, 171, 174, 0.5);
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -42,7 +46,6 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   font-size: var(--font-size);
-  width: 100%;
 }
 
 .centered-wrapper {
@@ -77,10 +80,10 @@ main {
   position: relative;
 
   & div {
-    bottom: 10%;
     color: var(--dark-desaturated-cyan);
     padding: var(--padding);
     position: absolute;
+    bottom: 10%;
     text-align: center;
 
     & h2 {
@@ -139,7 +142,7 @@ main > header {
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 1%;
+    top: 3%;
     width: 100%;
     z-index: 1;
 
@@ -269,7 +272,6 @@ main > footer {
   background: var(--moderate-cyan);
   flex: auto;
   flex-wrap: wrap;
-  width: 100%;
 
   & > img {
     margin-top: 2rem;
@@ -338,11 +340,34 @@ main > footer {
           background: white;
           color: black;
         }
+
+        & li span:hover {
+          background: var(--light-grayish-blue);
+          color: white;
+        }
       }
     }
 
     & #main-nav::before {
       display: none;
+    }
+  }
+
+  .txt-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding);
+
+    & > h2 {
+      text-align: start;
+      width: 70%;
+    }
+
+    & > p {
+      text-align: start;
+      width: 70%;
     }
   }
 
@@ -364,6 +389,7 @@ main > footer {
 
     & h2 {
       flex: 1 0 100%;
+      margin-bottom: 0;
     }
 
     & > div {
@@ -380,5 +406,17 @@ main > footer {
 
   main > footer {
     grid-column: span 2;
+
+    & li:hover {
+      color: white;
+    }
+
+    & svg:hover {
+      cursor: pointer;
+
+      & path {
+        fill: white;
+      }
+    }
   }
 }

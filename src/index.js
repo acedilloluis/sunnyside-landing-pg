@@ -6,5 +6,5 @@ hamBtn.addEventListener('click', () => {
   isMenuOpen
     ? navMenu.classList.add('visually-hidden')
     : navMenu.classList.remove('visually-hidden');
-  isMenuOpen = isMenuOpen ? false : true;
+  isMenuOpen = !isMenuOpen;
 });
